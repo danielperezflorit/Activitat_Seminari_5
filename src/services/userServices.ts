@@ -19,6 +19,7 @@ export const getEntries = {
         return await usersofDB.findByIdAndDelete(id);
     },
 
+    
 
     addExperiencia: async(idUser:string, idExp:string)=>{
         return await usersofDB.findByIdAndUpdate(idUser,{$addToSet:{experiencies:idExp}});
